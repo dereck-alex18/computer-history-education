@@ -1,0 +1,36 @@
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #252523;
+}
+
+header ul{
+    list-style: none;
+}
+
+header ul li{
+    display: inline-block;
+}
+
+.logo{
+    margin-right: auto;
+    color: #fafafa
+}
+
+.nav-links{
+    text-decoration: none;
+    padding: 20px 30px;
+    color: #fafafa;
+    transition: all 0.2s ease;
+}
+
+.nav-links:hover {
+    background-color: #3F3F3E;
+    transition: all 0.2s ease;
+}
+
+.active{
+    background-color: #3F3F3E;
+}

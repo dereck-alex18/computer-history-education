@@ -10,47 +10,45 @@ body{
     
 }
 
-header{
+.content{
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 20px 30px;
-    background-color: #252523;
+    align-items: flex-start;
     
-
 }
 
-header ul{
-    list-style: none;
+.navigation-menu{
+    flex: 0.5;
 }
 
-header ul li{
-    display: inline-block;
+.content h1{
+    text-align: center;
+    padding: 20px;
+    font-size: 2rem;
 }
 
-.logo{
-    margin-right: auto;
-    color: #fafafa
+.content article{
+    flex: 4.5;
+    padding: 15px;
+    text-align: justify;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    border-left: 1px solid #222;
 }
 
-.nav-links{
+.content .navigation-menu li{
     text-decoration: none;
-    padding: 20px 30px;
-    color: #fafafa;
-    transition: all 0.2s ease;
+    padding: 20px;
 }
 
-.nav-links:hover {
-    background-color: #3F3F3E;
-    transition: all 0.2s ease;
+.content .navigation-menu li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #222;
+    transition: all 0.3s ease;
 }
 
-.active{
-    background-color: #3F3F3E;
-}
-
-main{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.content .navigation-menu li a:hover{
+    text-decoration: underline;
+    transition: all 0.3s ease;
+    
 }
