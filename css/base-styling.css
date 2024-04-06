@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100vh;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:  #E5EEFF;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.content{
+    display: flex;
+    align-items: flex-start;
+    flex: 1 0 auto;   
+}
