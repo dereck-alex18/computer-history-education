@@ -6,10 +6,9 @@
     <title>Computer History</title>
     <link rel="stylesheet" href="../css/base-styling.css"/>
     <link rel="stylesheet" href="../css/navbar.css"/>
-    <link rel="stylesheet" href="../css/main-page.css"/>
+    <link rel="stylesheet" href="../css/contact.css">
     <link rel="stylesheet" href="../css/footer.css"/>
 </head>
-
 <body>
     <header>
         <h3 class="logo">LOGO</h3>
@@ -22,7 +21,29 @@
         </nav>
     </header>
 
-    <main class="content"></main>
+    <main>
+        <form class="form" action="">
+            <h1 style="margin-top: 50px; margin-bottom: 20px;">Entre em Contato Conosco</h1> 
+            <br>
+            <div class="form-group">
+                <label for="FirstName">Primeiro Nome</label>
+                <input  id="FirstName" type="text">
+            </div>
+            <div class="form-group">
+                <label for="SecondName">Segundo Nome</label>
+                <input id="SecondName" type="text">
+            </div>
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input id="Email" type="email">
+            </div>
+            <div class="form-group">
+                <label>Deixe seu comentário abaixo:</label>
+                <textarea id="comentario" rows="5"></textarea>
+            </div>
+            <button class="buttoncontact">ENVIAR</button>
+        </form>    
+    </main>
 
     <footer>
         <p>© All Rights Reserved</p>
