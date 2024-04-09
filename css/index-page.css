@@ -2,6 +2,7 @@
 .heading{
     text-align: center;
     padding: 20px;
+    margin-bottom: 20px;
     font-size: 2rem;
 }
 
@@ -29,12 +30,34 @@
 
 .content .navigation-menu li a{
     text-decoration: none;
-    font-size: 1.5rem;
-    color: #222;
+    font-size: 1.3rem;
+    color: #0050bb;
     transition: all 0.3s ease;
 }
 
 .content .navigation-menu li a:hover{
     text-decoration: underline;
     transition: all 0.3s ease;
+}
+
+section p{
+    margin-bottom: 20px;
+}
+
+.list-main-context{
+    margin: 20px 0px 20px 20px;
+}
+
+.image-box{
+    display: inline-block;
+}
+
+.image-box img{
+    margin: 5px 20px;
+    width: 250px;
+    height: 250px;
+}
+
+.image-box p{
+    text-align: center;
 }
