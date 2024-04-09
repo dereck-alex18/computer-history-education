@@ -1,0 +1,72 @@
+main {
+    display: flex;
+    font-size: 16px;   
+    padding: 40px;
+    justify-content: space-evenly;
+    margin: 0%;
+    height: 900px;
+}
+
+section {
+    display: inline-block;
+    list-style: none;
+    align-items: center;
+}    
+
+img {
+    align-items: center;
+}
+
+.a {
+    color: black;
+    padding: 5px;
+    align-items: center;
+}
+
+.classfotosabout {
+    display: flex;
+    align-items: center;
+}
+
+.div-1 {
+    position: relative;
+    top: 30px;
+    left: 60px;
+}
+
+.div-2 {
+    position: relative;
+    top: 30px;
+    left: 250px;
+}
+
+.div-3 {
+    position: relative;
+    top: 30px;
+    left: 460px;
+}
+
+.div-4 {
+    position: relative;
+    top: 30px;
+    left: 680px;
+}
+
+.div-5 {
+    position: relative;
+    top: 450px;
+    right: 250px;  
+}
+
+.div-6 {
+    position: relative;
+    top: 450px;
+    right: 995px;
+}
+
+.div-7 {
+    position: relative;
+    top: 450px;
+    right: 200px;
+
+}
