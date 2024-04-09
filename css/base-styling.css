@@ -21,3 +21,9 @@ body{
     align-items: flex-start;
     flex: 1 0 auto;   
 }
+
+.logo img{
+    color: #fafafa;
+    max-width: 80px;
+    max-height: 50px;
+}
