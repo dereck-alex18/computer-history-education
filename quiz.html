@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computer History</title>
+    <link rel="icon" href="Assets/Icons/processor.ico" />
+    <link rel="stylesheet" href="css/base-styling.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/quiz.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
+  <body>
+    <header>
+      <h3 class="logo">
+        <a href="./index.html"
+          ><img
+            src="Assets/Images/content/evolution-logo.png"
+            alt="Computer Evolution Logo"
+        /></a>
+      </h3>
+      <nav class="nav">
+        <ul>
+          <li><a class="nav-links" href="./index.html">Home</a></li>
+          <li><a class="nav-links" href="./contact.html">Contact</a></li>
+          <li><a class="nav-links" href="./about.html">About</a></li>
+          <li><a class="nav-links active" href="./quiz.html">Quiz</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="content">
+      <div class="container">
+        <div class="quiz-container">
+          <div class="questionAndOptions"></div>
+          <button id="send">Enviar</button>
+          <div class="answerVerification">
+            <p id="answerExplanation"></p>
+            <button id="next">Proximo</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>© All Rights Reserved</p>
+    </footer>
+
+    <script src="quiz.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+
+.container{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.quiz-container{
+    border: 2px solid black;
+    margin: 30px auto;
+    padding: 30px;
+    text-align: center;
+    width: 50%;
+
+}
+
+.question{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.answerVerification{
+    margin-top: 10px;
+
+}
+
