@@ -1,9 +1,16 @@
 const questionsAndAnswers = 
     [
        {
-           options: ["Transistor", "Fita magnetica", "Valvula", "Cartao perfurado", "Linguagem de programação"],
-           answer: "Transistor",
-           question: "Qual componente revolucionou a computação nos anos 50",
+           options: 
+           [
+            "Máquina de Anticítera", 
+            "Ábaco", 
+            "Ossos de Napier", 
+            "Máquina de Pascal", 
+            "Tear de Jacquard"
+            ],
+           answer: "Ábaco",
+           question: "Qual foi o primeiro instrumento utilizado para realizar cálculos simples?",
         },
         {
             options: ["C", "JavaScript", "Java", "C#", "C++"],
@@ -33,14 +40,15 @@ const buildQuestionStructure = (question, options) => {
     `;
     let optionsStructure = ``; 
 
-    for(const option of options){
+    for(const [i, option] of options.entries()){
+        console.log(option);
         optionsStructure +=
         `
-        <div class="answers">
-            <input type="radio" value=${option} name="answer">
-            <label for="question1">${option}</label>
+        <div class="answer">
+            <input type="radio" id=question${i} value=${option} name="answer">
+            <label for="question${i}">${option}</label>
         </div>
-        `
+        `;
     };
     
     const quizStructure = questionStructure + optionsStructure;
@@ -48,10 +56,22 @@ const buildQuestionStructure = (question, options) => {
     return quizStructure;
 };
 
+const toggleButtonState = (isDisabled) => {
+    
+    if(!isDisabled){
+        sendButton.style.opacity = 1;
+        sendButton.disabled = isDisabled;
+    }else{
+        sendButton.style.opacity = 0.5;
+        sendButton.disabled = isDisabled;
+    }
+}
+
 
 const buildQuiz = () => {
-    answerVerification.style.display = "none"
-    quizContainer.innerHTML = buildQuestionStructure(questionsAndAnswers[questionNumber].question, questionsAndAnswers[questionNumber].options)
+    toggleButtonState(false);
+    answerVerification.style.display = "none";
+    quizContainer.innerHTML = buildQuestionStructure(questionsAndAnswers[questionNumber].question, questionsAndAnswers[questionNumber].options);
 };
 
 buildQuiz();
@@ -61,13 +81,17 @@ sendButton.addEventListener("click", () => {
     const currentAnswer = questionsAndAnswers[questionNumber].answer;
     const selectedOption = document.querySelector('input[name="answer"]:checked + label').textContent; 
     
+    toggleButtonState(true);
+
     if(currentAnswer === selectedOption){
         score++;
-        answerVerification.style.display = "block"
-        answerExplanation.textContent = `That is correct. The answer is ${currentAnswer}`
+        answerVerification.style.display = "block";
+        answerExplanation.style.background = "#32cd32";
+        answerExplanation.textContent = `That is correct. The answer is ${currentAnswer}.`;
     } else{
-        answerVerification.style.display = "block"
-        answerExplanation.textContent = `That is incorrect. The answer is ${currentAnswer}`
+        answerVerification.style.display = "block";
+        answerExplanation.style.background = "#ED4337";
+        answerExplanation.textContent = `That is incorrect. The answer is ${currentAnswer}.`;
     }
     
     
@@ -78,8 +102,9 @@ nextButton.addEventListener("click", () => {
         questionNumber++;
         buildQuiz();
     } else{
-        answerVerification.style.display = "none"
-        quizContainer.innerHTML = `<p>Quiz finished! Your score was: ${score}/${questionsAndAnswers.length}</p>`
+        answerVerification.style.display = "none";
+        sendButton.style.display = "none";
+        quizContainer.innerHTML = `<p>Quiz finished! Your score was: ${score}/${questionsAndAnswers.length}</p>`;
     }
 });
 

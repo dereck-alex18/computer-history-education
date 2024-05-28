@@ -7,7 +7,7 @@
 .quiz-container{
     border: 2px solid black;
     margin: 30px auto;
-    padding: 30px;
+    padding: 50px;
     text-align: center;
     width: 50%;
 
@@ -18,8 +18,61 @@
     margin-bottom: 20px;
 }
 
-.answerVerification{
-    margin-top: 10px;
+.answers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
 
+
+.answerVerification p{
+    padding: 20px;
+    margin: 15px 5px;
+    font-size: 1.2rem;
+    color: #fff
+}
+
+.answer{
+    display: flex;
+    flex-direction: column;
+}
+
+.answer input{
+    display: none;
+} 
+
+.answer label{
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #ddd;
+    padding: 10px;
+}
+
+.answer label:hover{
+    background-color: #bbb;
+}
+
+.answer input[type="radio"]:checked + label{
+    background-color: #bbb;
+}
+
+.quiz-btn{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background: #0b98d0de;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.quiz-btn:hover{
+    background-color: #0b98d0de;
+    color: white;
 }
 
