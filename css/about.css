@@ -1,72 +1,82 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos de navegação */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links.active {
+    font-weight: bold;
+}
+
+/* Estilos principais */
 main {
     display: flex;
-    font-size: 16px;   
-    padding: 40px;
-    justify-content: space-evenly;
-    margin: 0%;
-    height: 900px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 
 section {
-    display: inline-block;
-    list-style: none;
-    align-items: center;
-}    
-
-img {
-    align-items: center;
-}
-
-.a {
-    color: black;
-    padding: 5px;
-    align-items: center;
-}
-
-.classfotosabout {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-.div-1 {
-    position: relative;
-    top: 30px;
-    left: 60px;
+.div-1, .div-2, .div-3, .div-4, .div-5, .div-6, .div-7, .div-8 {
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
 }
 
-.div-2 {
-    position: relative;
-    top: 30px;
-    left: 250px;
+.div-1 img, .div-2 img, .div-3 img, .div-4 img, .div-5 img, .div-6 img, .div-7 img, .div-8 img {
+    border-radius: 20px;
 }
 
-.div-3 {
-    position: relative;
-    top: 30px;
-    left: 460px;
+.div-1 p, .div-2 p, .div-3 p, .div-4 p, .div-5 p, .div-6 p, .div-7 p, .div-8 p {
+    font-size: 20px;
+    margin-top: 10px;
 }
 
-.div-4 {
-    position: relative;
-    top: 30px;
-    left: 680px;
+.div-1 a, .div-2 a, .div-3 a, .div-4 a, .div-5 a, .div-6 a, .div-7 a, .div-8 a {
+    display: inline-block;
+    margin-top: 10px;
 }
 
-.div-5 {
-    position: relative;
-    top: 450px;
-    right: 250px;  
-}
-
-.div-6 {
-    position: relative;
-    top: 450px;
-    right: 995px;
-}
-
-.div-7 {
-    position: relative;
-    top: 450px;
-    right: 200px;
-
+/* Estilos de rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
 }
