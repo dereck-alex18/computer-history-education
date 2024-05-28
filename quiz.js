@@ -106,7 +106,7 @@ const buildQuiz = () => {
 const resetQuiz = () => {
     questionNumber = 0;
     score = 0;
-    sendButton.style.display = "block";
+    sendButton.style.display = "inline-block";
     restartButton.style.display = "none";
     buildQuiz();
 };

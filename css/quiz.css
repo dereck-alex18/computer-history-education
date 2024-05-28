@@ -99,6 +99,18 @@
 .answer input[type="radio"]:checked + label{
     background-color: #46dbaf;
 }
+.quiz{
+    width: 50%;
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background: #0b98d0de;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+    justify-content: center;
+}
 
 .quiz-btn{
     width: 50%;
