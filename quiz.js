@@ -66,6 +66,7 @@ const restartButton = document.querySelector("#restart");
 
 
 const buildQuestionStructure = (question, options) => {
+   const progressBar = '<div id="progressBarContainer"><div id="progressBar"></div></div>';
    let questionStructure = `
        <p class="question">${question}</p>`;
    let optionsStructure = ``;
@@ -79,7 +80,7 @@ const buildQuestionStructure = (question, options) => {
        `;
    }
 
-   return questionStructure + optionsStructure;
+   return progressBar + questionStructure + optionsStructure;
 };
 
 const toggleButtonState = (isDisabled) => {
@@ -91,6 +92,9 @@ const buildQuiz = () => {
    toggleButtonState(false);
    answerVerification.style.display = "none";
    quizContainer.innerHTML = buildQuestionStructure(questionsAndAnswers[questionNumber].question, questionsAndAnswers[questionNumber].options);
+   const progressBar = document.getElementById("progressBar");
+   const progressBarWidth = (questionNumber + 1) / questionsAndAnswers.length * 100;
+   progressBar.style.width = `${progressBarWidth}%`;
 };
 
 const resetQuiz = () => {
@@ -148,3 +152,4 @@ const checkScore = (score) => {
 
    return "Parabéns, você arrasou!!! 👏👏👏👏"
 }
+
