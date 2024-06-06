@@ -63,12 +63,11 @@ const answerVerification = document.querySelector(".answerVerification");
 const answerExplanation = document.querySelector("#answerExplanation");
 const nextButton = document.querySelector("#next");
 const restartButton = document.querySelector("#restart");
-//const correctAnswerSpan = document.querySelector("#correctAnswer");
+
 
 const buildQuestionStructure = (question, options) => {
    let questionStructure = `
-       <p class="question">${question}</p>
-   `;
+       <p class="question">${question}</p>`;
    let optionsStructure = ``;
 
    for (const [i, option] of options.entries()) {
