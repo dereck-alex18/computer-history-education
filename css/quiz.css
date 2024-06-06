@@ -135,14 +135,16 @@
     height: 40px;
     background-color: #ddd;
     border: none;
+    border-radius: 10px;
     margin-bottom: 20px;
 }
 
 #progressBar{
     height: 40px;
     background-color: #4caf50;
+    border-radius: 10px;
     width: 0%;
-    transition: width 1s;
+    transition: width 0.5s;
 }
 
 #correctAnswer{

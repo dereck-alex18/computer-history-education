@@ -63,10 +63,10 @@ const answerVerification = document.querySelector(".answerVerification");
 const answerExplanation = document.querySelector("#answerExplanation");
 const nextButton = document.querySelector("#next");
 const restartButton = document.querySelector("#restart");
+const progressBar = document.getElementById("progressBar");
 
 
 const buildQuestionStructure = (question, options) => {
-   const progressBar = '<div id="progressBarContainer"><div id="progressBar"></div></div>';
    let questionStructure = `
        <p class="question">${question}</p>`;
    let optionsStructure = ``;
@@ -80,7 +80,7 @@ const buildQuestionStructure = (question, options) => {
        `;
    }
 
-   return progressBar + questionStructure + optionsStructure;
+   return questionStructure + optionsStructure;
 };
 
 const toggleButtonState = (isDisabled) => {
@@ -92,7 +92,6 @@ const buildQuiz = () => {
    toggleButtonState(false);
    answerVerification.style.display = "none";
    quizContainer.innerHTML = buildQuestionStructure(questionsAndAnswers[questionNumber].question, questionsAndAnswers[questionNumber].options);
-   const progressBar = document.getElementById("progressBar");
    const progressBarWidth = (questionNumber + 1) / questionsAndAnswers.length * 100;
    progressBar.style.width = `${progressBarWidth}%`;
 };
